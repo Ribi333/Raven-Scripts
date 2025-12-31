@@ -1,7 +1,3 @@
-/*
-    automatically sends "Happy New Year" in the chat in hypixel while in the main lobby during the fireworks show
-*/
-
 boolean sent;
 boolean lowercase;
 String locations;
@@ -50,7 +46,7 @@ void onPreUpdate() {
 
 boolean onChat(String message) {
     String msg = util.strip(message);
-    if (msg.contains("   ") && msg.contains(", ") && !msg.contains("---" && !msg.contains("2") && !msg.contains("0") && !msg.contains("6"))) {
+    if (msg.contains("   ") && msg.contains(", ") && !msg.contains("---") && !msg.contains("2") && !msg.contains("0") && !msg.contains("6")) {
         locations = msg;
         gotLocations = true;
     }
