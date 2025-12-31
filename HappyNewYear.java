@@ -58,7 +58,6 @@ boolean onChat(String message) {
     if (msg.contains("   ") && msg.contains(", ")) { // && !msg.contains("---") && !msg.contains("2") && !msg.contains("0") && !msg.contains("6")) {
         locations = cleanmsg;
         gotLocations = true;
-        client.print("&7[&dR&7] &flocations: " + locations);
     }
     return true;
 }
