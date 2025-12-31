@@ -50,9 +50,15 @@ void onPreUpdate() {
 
 boolean onChat(String message) {
     String msg = util.strip(message);
-    if (msg.contains("   ") && msg.contains(", ") && !msg.contains("---") && !msg.contains("2") && !msg.contains("0") && !msg.contains("6")) {
-        locations = msg;
+    String cleanmsg = msg.replaceAll("-", "")
+                         .replaceAll("2", "")
+                         .replaceAll("6", "")
+                         .replaceAll("0", "")
+                         .trim();
+    if (msg.contains("   ") && msg.contains(", ")) { // && !msg.contains("---") && !msg.contains("2") && !msg.contains("0") && !msg.contains("6")) {
+        locations = cleanmsg;
         gotLocations = true;
+        client.print("&7[&dR&7] &flocations: " + locations);
     }
     return true;
 }
