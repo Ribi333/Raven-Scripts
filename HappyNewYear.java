@@ -1,3 +1,7 @@
+/*
+    automatically sends "Happy New Year" in the chat in hypixel while in the main lobby during the fireworks show
+*/
+
 boolean sent;
 boolean lowercase;
 String locations;
